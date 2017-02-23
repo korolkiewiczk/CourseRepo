@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZamianaMiejsc4x", "ZamianaMiejsc4x\ZamianaMiejsc4x.csproj", "{132045F3-FA39-4EA2-8D2F-C9CB87D0E9A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ankieta", "Ankieta\Ankieta.csproj", "{D5F969A9-7C46-4362-A778-2F216F9D7835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie z Gwiazdkami", "Zadanie z Gwiazdkami\Zadanie z Gwiazdkami.csproj", "{C308D2BF-1242-45AD-BC33-DF600764A5AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{132045F3-FA39-4EA2-8D2F-C9CB87D0E9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132045F3-FA39-4EA2-8D2F-C9CB87D0E9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132045F3-FA39-4EA2-8D2F-C9CB87D0E9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132045F3-FA39-4EA2-8D2F-C9CB87D0E9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F969A9-7C46-4362-A778-2F216F9D7835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F969A9-7C46-4362-A778-2F216F9D7835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F969A9-7C46-4362-A778-2F216F9D7835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F969A9-7C46-4362-A778-2F216F9D7835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C308D2BF-1242-45AD-BC33-DF600764A5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C308D2BF-1242-45AD-BC33-DF600764A5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C308D2BF-1242-45AD-BC33-DF600764A5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C308D2BF-1242-45AD-BC33-DF600764A5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
