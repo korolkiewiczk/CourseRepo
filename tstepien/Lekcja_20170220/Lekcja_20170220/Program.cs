@@ -10,7 +10,7 @@ namespace Lekcja_20170220
     {
         static void Main(string[] args)
         {
-            //L20170220();
+            //L20170220();      //zadanko z lekcji:)
             //zadanieLekcjaGwiazdka();
             zadanie4par();
             //ankietaFull();
@@ -168,7 +168,6 @@ namespace Lekcja_20170220
                 text2z = l1 + f1;
                 Console.WriteLine(text2z);
             }
-
         }
         public static void L20170220()
         {
