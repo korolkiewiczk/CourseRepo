@@ -169,18 +169,6 @@ namespace Lekcja_20170220
                 Console.WriteLine(text2z);
             }
 
-
-
-            /*
-             * var ids = new[] { "1", "2", "3", "4" };
-            var sb1 = new StringBuilder();
-            foreach(var id in ids)
-            {
-                sb.Append(id);
-            }
-            var s = sb.ToString();
-            Console.WriteLine(s);
-            */
         }
         public static void L20170220()
         {
