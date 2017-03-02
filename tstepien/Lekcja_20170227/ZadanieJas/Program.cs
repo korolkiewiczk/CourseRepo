@@ -15,10 +15,10 @@ namespace ZadanieJas
             //m = Convert.ToInt32(Console.ReadLine());
             int[] r = new int[n];
             int[] k = new int[m];
-            int odp = 0;
             r[0] = 5; r[1] = 6; r[2] = 4; r[3] = 3; r[4] = 6; r[5] = 2; r[6] = 3;
-            k[0] = 3; k[1] = 2; k[2] = 5;
-            //k[0] = 5; k[1] = 2; k[2] = 5;
+            //k[0] = 3; k[1] = 2; k[2] = 5;
+            k[0] = 5; k[1] = 2; k[2] = 5;
+            //k[0] = 4; k[1] = 6; k[2] = 5;
 
             for (int j=0;j<m; j++)
             {
@@ -38,8 +38,8 @@ namespace ZadanieJas
                     }
                 }
             }
-            Console.WriteLine("\n\nOdpowiedz = {0}",odp);
-
+            Console.WriteLine("\n\n\n n = {0}", n );
+            Console.WriteLine("\n\n Odpowiedz = {0}",n+1);
             Console.ReadKey();
         }
     }
