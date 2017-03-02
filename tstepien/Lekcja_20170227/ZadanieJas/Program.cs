@@ -18,33 +18,27 @@ namespace ZadanieJas
             int odp = 0;
             r[0] = 5; r[1] = 6; r[2] = 4; r[3] = 3; r[4] = 6; r[5] = 2; r[6] = 3;
             k[0] = 3; k[1] = 2; k[2] = 5;
+            //k[0] = 5; k[1] = 2; k[2] = 5;
 
-            /*
-            for (int i=1;i<=n;i++)
-            {
-                r[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            for (int j=1;i<=m;j++)
-            {
-                k[j] = Convert.ToInt32(Console.ReadLine());
-            }
-            */
             for (int j=0;j<m; j++)
             {
-                for (int i = n-1; i >= 0; i--)
+                Console.Write("\n\t\t\t j = {0}", j);
+                for (int i = 0; i < n; i++)
                 {
-                    if (r[i]>k[j])
+                    Console.Write("\n\t\t i = {0}",i);
+                    if (k[j]>r[i])
                     {
-                        i++;
-                        break;
+                        n = i-1;
+                        Console.WriteLine("\t\t\t\t\t odp = {0}", n);
                     }
-                    else
+                    else if (i==n-1 && (k[j] <= r[i] || k[j] == r[i]))
                     {
-                        odp = r[i];
+                        n = i;
+                        Console.WriteLine("\t\t\t\t\t odp = {0}", n);
                     }
                 }
             }
-            Console.WriteLine("Odpowiedz = {0}",odp);
+            Console.WriteLine("\n\nOdpowiedz = {0}",odp);
 
             Console.ReadKey();
         }
