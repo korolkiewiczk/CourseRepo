@@ -33,13 +33,18 @@ namespace ZadanieJas
             {
                 for (int i = n-1; i >= 0; i--)
                 {
-                    if (r[i]<=k[j])
+                    if (r[i]>k[j])
+                    {
+                        i++;
+                        break;
+                    }
+                    else
                     {
                         odp = r[i];
                     }
                 }
             }
-            Console.WriteLine(odp);
+            Console.WriteLine("Odpowiedz = {0}",odp);
 
             Console.ReadKey();
         }
