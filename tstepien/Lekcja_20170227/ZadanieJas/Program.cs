@@ -10,16 +10,19 @@ namespace ZadanieJas
     {
         static void Main(string[] args)
         {
-            int n=7, m=3;
-            //n = Convert.ToInt32(Console.ReadLine());
-            //m = Convert.ToInt32(Console.ReadLine());
+            //int n=7, m=3;
+            var nm = Console.ReadLine().Split(null);
+            int n = int.Parse(nm[0]);
+            int m = int.Parse(nm[1]);
+
             int[] r = new int[n];
             int[] k = new int[m];
-            r[0] = 5; r[1] = 6; r[2] = 4; r[3] = 3; r[4] = 6; r[5] = 2; r[6] = 3;
-            //k[0] = 3; k[1] = 2; k[2] = 5;
-            //k[0] = 5; k[1] = 2; k[2] = 5;
-            //k[0] = 4; k[1] = 6; k[2] = 5;
-            //k[0] = 7; k[1] = 1; k[2] = 1;
+
+            var rx = Console.ReadLine().Split(null);
+            var kx = Console.ReadLine().Split(null);
+
+            for (int i = 0; i < rx.Length; i++) r[i] = int.Parse(rx[i]);
+            for (int j = 0; j < kx.Length; j++) k[j] = int.Parse(kx[j]);
 
             for (int j=0;j<m; j++)
             {
