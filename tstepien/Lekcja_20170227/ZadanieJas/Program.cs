@@ -28,7 +28,7 @@ namespace ZadanieJas
                 for (int i = 0; i < n; i++)
                 {
                     if (k[j]>r[i]) n = i;
-                    else if (i==n-1 && (k[j] <= r[i] || k[j] == r[i])) n = i;
+                   // else if (i==n-1 && (k[j] <= r[i] || k[j] == r[i])) n = i;
                 }
             }
             Console.WriteLine("Odpowiedz = {0}",n);
