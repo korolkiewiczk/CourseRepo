@@ -8,7 +8,6 @@ namespace Leksja_20170306
 {
     class Program
     {
-
         private static Dictionary<string, Func<double, double, double>> _operators = new Dictionary<string, Func<double, double, double>>()
         {
             {"+", Add },
@@ -44,8 +43,8 @@ namespace Leksja_20170306
                 }
                 else
                 {
-                    int a = stack.Pop();
-                    int b = stack.Pop();
+                    int a = stack.Pop();            //przekazanie tak naprawde do "x" ze stosu - pierwsza z gory
+                    int b = stack.Pop();            //przekazanie tak naprawde do "y" ze stosu - druga z gory
                     stack.Push((int)_operators[token](a, b));
                 }
             }
@@ -63,12 +62,12 @@ namespace Leksja_20170306
 
         private static void CreateOperators()
         {
-            _operators.Add("*", (x, y)=> x * y);                //wyraznie lambda
+            _operators.Add("*", (x, y) => 
+            x * y);                //wyraznie lambda
             _operators.Add("/", (x, y) => x / y);
             _operators.Add("%", (x, y) => x % y);
             _operators.Add("&", (x, y) => (int) x & (int) y);
             _operators.Add("SIN", (x, y) => x * y);
-            _operators.Add("*", (x, y) => Math.Sin(x));
         }
     }
 }
