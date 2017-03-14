@@ -10,28 +10,28 @@ namespace ZadanieJas
     {
         static void Main(string[] args)
         {
-            var nm = Console.ReadLine().Split(null);
-            int n = int.Parse(nm[0]);
-            int m = int.Parse(nm[1]);
+            var inputWysokosciRurkiIIlosciKrazkow = Console.ReadLine().Split(null);
+            int wysokoscRurki = int.Parse(inputWysokosciRurkiIIlosciKrazkow[0]);
+            int iloscKrazkow = int.Parse(inputWysokosciRurkiIIlosciKrazkow[1]);
 
-            int[] r = new int[n];
-            int[] k = new int[m];
+            int[] szerokosciRurki = new int[wysokoscRurki];
+            int[] szerokosciKrazkow = new int[iloscKrazkow];
 
-            var rx = Console.ReadLine().Split(null);
-            var kx = Console.ReadLine().Split(null);
+            var szerokosciRurkiZInputu = Console.ReadLine().Split(null);
+            var szerokosciKrazkowZInputu = Console.ReadLine().Split(null);
 
-            for (int i = 0; i < rx.Length; i++) r[i] = int.Parse(rx[i]);
-            for (int j = 0; j < kx.Length; j++) k[j] = int.Parse(kx[j]);
-
-            for (int j=0;j<m; j++)
+            for (int i = 0; i < szerokosciRurkiZInputu.Length; i++) szerokosciRurki[i] = int.Parse(szerokosciRurkiZInputu[i]);
+            for (int j = 0; j < szerokosciKrazkowZInputu.Length; j++) szerokosciKrazkow[j] = int.Parse(szerokosciKrazkowZInputu[j]);
+            int dolnyPoziomRurki = wysokoscRurki;
+            for (int numerKrazka=0;numerKrazka<iloscKrazkow; numerKrazka++)
             {
-                for (int i = 0; i < n; i++)
+                for (int poziomRurki = 0; poziomRurki < dolnyPoziomRurki; poziomRurki++)
                 {
-                    if (k[j]>r[i]) n = i;
+                    if (szerokosciKrazkow[numerKrazka]>szerokosciRurki[poziomRurki]) dolnyPoziomRurki = poziomRurki;
                    // else if (i==n-1 && (k[j] <= r[i] || k[j] == r[i])) n = i;
                 }
             }
-            Console.WriteLine("Odpowiedz = {0}",n);
+            Console.WriteLine("Odpowiedz = {0}", dolnyPoziomRurki);
             Console.ReadKey();
         }
     }
