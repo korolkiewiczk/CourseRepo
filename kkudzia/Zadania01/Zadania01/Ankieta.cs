@@ -10,14 +10,14 @@ namespace ConsoleApplication2
     class Ankieta
     {
 
-        string[] standardAnswer = { "Tak.", "Nie.", "Nie wiem." };
+        string[] _standardAnswer = { "Tak.", "Nie.", "Nie wiem." };
         string[] differentAnswer = { "Co?", "Chyba Ty!", "Weź się...", "Owszem.", "Nie!", "F*ck it!" };
 
         Random rnd = new Random();
         int ansIndex;
         string question;
 
-        public void runme()
+        public void Runme()
         {
 
             while (true)
@@ -31,7 +31,7 @@ namespace ConsoleApplication2
                 try
                 {
                     Console.WriteLine(chooseAnswer(
-                        (question.Substring(0, 3) == "czy") ? standardAnswer : differentAnswer
+                        (question.Substring(0, 3) == "czy") ? _standardAnswer : differentAnswer
                         ));
                 }
                 catch (Exception e)

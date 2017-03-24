@@ -18,9 +18,9 @@ namespace ConsoleApplication2
             Ankieta ankietka = new Ankieta();
             
             
-            ala.runme();
-            //zamianka.runme();
-            //ankietka.runme();
+            //ala.runme();
+            zamianka.Runme();
+            //ankietka.Runme();
 
             Console.ReadKey();
 

@@ -9,8 +9,8 @@ namespace ConsoleApplication2
     class Zamiana
     {
 
-        string[] parameters = { "a", "b", "c", "d" };
-        string[] newOrder = { "b", "d", "a", "c" };
+        string[] parameters = { "a", "b", "c", "d", "e", "f" };
+        string[] newOrder = { "b", "d", "a", "c", "f", "e"};
         string baseText, subText, tempText, modifiedText;
         int lengthSum = 0;
         int tempIndex;
@@ -19,7 +19,7 @@ namespace ConsoleApplication2
         Dictionary<string, string> substrings = new Dictionary<string, string>();
 
 
-        public void runme()
+        public void Runme()
         {
 
             foreach (string param in parameters)
