@@ -22,9 +22,8 @@ namespace RurkaJasia
 
             ThrowWheels();
 
-            // Wypiywanie leveli dla poszczegolnych posziomow
+            // Wypiywanie leveli dla poszczegolnych zawezen
             // foreach (int key in _tubeMask.Keys) { Console.WriteLine("klucz: " + key + " warosc: " + _tubeMask[key]); }
-
 
             Console.WriteLine(_result);
 
