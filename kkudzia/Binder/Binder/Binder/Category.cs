@@ -9,11 +9,13 @@ namespace Binder
     class Category
     {
 
-
-
         private string CategoryName { get; set; }
         private List<Document> Documents { get; set; }
 
+        public void AddNewDocument(Document givenDocument)
+        {
+            Documents.Add(givenDocument);
+        }
 
     }
 }

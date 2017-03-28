@@ -9,7 +9,7 @@ namespace Binder
     class Document
     {
 
-
+        public string Text;
 
     }
 }

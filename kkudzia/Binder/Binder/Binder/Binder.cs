@@ -11,16 +11,30 @@ namespace Binder
 
         public List<Category> Categories { get; set; }
 
-
-
-        public void Add(Category categoryName, Document document)
+        private bool IsCategoryExist(Category givenCategory)
         {
+            return Categories.Contains(givenCategory);
+        }
 
+        private void AddNewCategory(Category givenCategory)
+        {
+            Categories.Add(givenCategory);
+        }
 
+        public void AddNewDocument(Category givenCategory, Document givenDocument)
+        {
+            if (!IsCategoryExist(givenCategory))
+            {
+                AddNewCategory(givenCategory);
+            }
 
-
+            givenCategory.AddNewDocument(givenDocument);
 
         }
+
+
+
+
 
 
     }
