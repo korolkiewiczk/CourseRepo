@@ -10,13 +10,12 @@ namespace MonteCarlo
     {
 
         static CommonUtils.GetDataFromConsole _common = new CommonUtils.GetDataFromConsole();
-        static private double _radius = (double) _common.GetInt32("promień");
+        static private double _radius = _common.GetInt32("promień");
         static private double[] _point = new double[2];
         static private double _squareArea = Math.Sqrt(_radius * 2);
         static private double _numberOfPoints = _common.GetInt32("liczba punktów");
         static private double _numberOfPointsBelonging = 0;
         static Random rand = new Random();
-
 
         static void Main(string[] args)
         {
