@@ -46,7 +46,7 @@
     <Compile Include="Binder.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Document.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

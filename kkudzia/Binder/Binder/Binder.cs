@@ -29,8 +29,29 @@ namespace Binder
             }
 
             givenCategory.AddNewDocument(givenDocument);
+        }
+
+        public void RemoveDocumentWithId()
+        { }
+
+
+        public void ShowDoumentsFromCategory(Category givenCategory)
+        {
+
 
         }
+
+
+
+
+        public void SaveToFile()
+        { }
+
+
+        public void ReadFromFile()
+        { }
+
+
 
 
 

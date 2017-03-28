@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Binder
 {
-    class Document
+    class Start
     {
-
-        public int ID { get; set; }
-        public string Text { get; set;}
-
+        static void Main(string[] args)
+        {
 
 
 
+
+        }
     }
 }

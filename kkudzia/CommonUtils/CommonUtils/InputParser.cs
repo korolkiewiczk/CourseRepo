@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Binder
+namespace CommonUtils
 {
-    class Program
+    class InputParser
     {
-        static void Main(string[] args)
-        {
 
 
 
 
-        }
+
+
     }
 }
