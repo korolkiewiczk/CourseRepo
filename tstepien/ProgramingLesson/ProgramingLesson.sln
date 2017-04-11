@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramingLesson", "ProgramingLesson\ProgramingLesson.csproj", "{4C9E2929-1D91-40B8-BC70-0EB45F6B692B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krazki", "Krazki\Krazki.csproj", "{23DC7568-24E5-430D-82C8-864EB1C0AE25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrazkiDictionary", "KrazkiDictionary\KrazkiDictionary.csproj", "{87E2919E-E5C4-4B01-A97B-6F5BA6EB32C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C9E2929-1D91-40B8-BC70-0EB45F6B692B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9E2929-1D91-40B8-BC70-0EB45F6B692B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9E2929-1D91-40B8-BC70-0EB45F6B692B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9E2929-1D91-40B8-BC70-0EB45F6B692B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DC7568-24E5-430D-82C8-864EB1C0AE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DC7568-24E5-430D-82C8-864EB1C0AE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DC7568-24E5-430D-82C8-864EB1C0AE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DC7568-24E5-430D-82C8-864EB1C0AE25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E2919E-E5C4-4B01-A97B-6F5BA6EB32C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E2919E-E5C4-4B01-A97B-6F5BA6EB32C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E2919E-E5C4-4B01-A97B-6F5BA6EB32C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E2919E-E5C4-4B01-A97B-6F5BA6EB32C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
