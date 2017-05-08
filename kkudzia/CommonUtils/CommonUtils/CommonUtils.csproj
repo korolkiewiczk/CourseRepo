@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="FileManager.cs" />
     <Compile Include="GetDataFromConsole.cs" />
+    <Compile Include="InputParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

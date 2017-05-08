@@ -1,0 +1,7 @@
+Hej, tak jak ostatnio zadanie dodatkowe :)
+Zaimplementowaæ program obliczaj¹cy funkcjê Ackermanna. 
+Wiêcej szczegó³ów na https://en.wikipedia.org/wiki/Ackermann_function
+
+krótki komentarz do zadania: 
+najproœciej zaimplementowaæ funkcjê u¿ywaj¹c definicji na stronie Wikipedii, 
+za pomoc¹ rekurencji. Proponujê jednak przemyœleæ rozwi¹zanie nierekurencyjne.

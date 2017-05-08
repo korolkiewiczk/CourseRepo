@@ -1,0 +1,9 @@
+Zadanie domowe:
+stworzyæ klasê Tank przechowuj¹c¹ czo³g. 
+Klasa powinna posiadaæ pola: 
+Position (wystarczy wspolrzedna X), 
+Size, 
+Angle, 
+Power. 
+Na razie zaimplementowaæ metodê Draw(Graphics). 
+Na podstawie Waszych rozwi¹zañ bêdziemy kontynuowaæ pracê na projektem w poniedzia³ek 8 Maja

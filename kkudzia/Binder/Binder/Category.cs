@@ -8,9 +8,15 @@ namespace Binder
 {
     class Category
     {
-
-        private string CategoryName { get; set; }
+        private string CategoryName;
         private List<Document> Documents { get; set; }
+
+        public Category(string givenCategoryName)
+        {
+            this.CategoryName = givenCategoryName;
+        }
+
+        
 
         
         public void AddNewDocument(Document givenDocument)

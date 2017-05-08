@@ -9,8 +9,17 @@ namespace Binder
     class Document
     {
 
-        public int ID { get; set; }
-        public string Text { get; set;}
+        private int ID { get;}
+        private string Text { get; set;}
+
+
+        public Document(string givenText)
+        {
+
+            //this.ID = NextID();
+            this.Text = givenText;
+
+        }
 
 
 

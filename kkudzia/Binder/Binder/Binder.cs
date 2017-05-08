@@ -9,26 +9,39 @@ namespace Binder
     class Binder
     {
 
-        public List<Category> Categories { get; set; }
+        private Dictionary<string, Category> _categories { get; set; }
 
-        private bool IsCategoryExist(Category givenCategory)
+        // roznica pomiedzy properta a fieldem;
+
+
+
+        public Binder()
         {
-            return Categories.Contains(givenCategory);
+            _categories = new Dictionary<string, Category>();
         }
 
-        private void AddNewCategory(Category givenCategory)
+
+
+        private bool IsCategoryExist(string givenCategoryName)
         {
-            Categories.Add(givenCategory);
+            return _categories.ContainsKey(givenCategoryName);
         }
 
-        public void AddNewDocument(Category givenCategory, Document givenDocument)
+        private void AddNewCategory(string givenCategoryName)
         {
-            if (!IsCategoryExist(givenCategory))
+            Category _category = new Category(givenCategoryName);
+            this._categories.Add(givenCategoryName, _category);
+        }
+
+        public void AddNewDocument(string givenCategoryName, string givenDocumentContent)
+        {
+
+            if (!IsCategoryExist(givenCategoryName))
             {
-                AddNewCategory(givenCategory);
+                AddNewCategory(givenCategoryName);
             }
+            _categories[givenCategoryName].AddNewDocument(new Document(givenDocumentContent));
 
-            givenCategory.AddNewDocument(givenDocument);
         }
 
         public void RemoveDocumentWithId()

@@ -1,0 +1,8 @@
+Zadanie domowe:
+przejrzyjcie dotychczasowe zadania i przeróbcie dowolne z nich na aplikacjê winforms.
+Na przyk³adzie I zadania z zamienianiem znaków:
+zamiast podawaæ wszystko w konsoli, 
+tworzymy TextBoxy gdzie wprowadzamy dane, 
+mamy przycisk Oblicz i po klikniêciu w labelce/textboxie wyœwietlamy wynik.
+
+Jako bonus, zadanie binder w wersji full
