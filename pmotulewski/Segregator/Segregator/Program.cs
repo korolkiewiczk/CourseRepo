@@ -4,18 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework2
+namespace Segregator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var logic = new Logic(new Answers());
-
-            while (true)
-            {
-                logic.Start();
-            }
+            Binder binder = new Binder();
         }
     }
 }

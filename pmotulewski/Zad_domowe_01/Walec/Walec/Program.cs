@@ -13,15 +13,13 @@ namespace Walec
             int pipe_height=0, ammount_of_disc=0;
             int[] pipe;
             int[] discs;
-            bool is_Correct = false;
-
+            bool is_Correct = false;            
             do
             {
                 Console.WriteLine("Podaj Wysokośc rurki i liczbę dysków kóra zamierzasz wrzucić oddzielone spacją");
                 string height_and_discs = Console.ReadLine();
 
-                var splitNumbers = height_and_discs.Split(' ');
-                splitNumbers.mamNadziejeZeTakaFunkcjaIstnieje = "";
+                var splitNumbers = height_and_discs.Split(' ');             
                 if (splitNumbers.Length == 2)
                 {
                     if (Int32.TryParse(splitNumbers[0], out pipe_height) && Int32.TryParse(splitNumbers[1], out ammount_of_disc))
