@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TanksGame
 {
-    class SimpleTank : TankInterface
+    class SimpleTank : ITank
     {
         private int positionX;
         private int positionY;
@@ -26,19 +26,24 @@ namespace TanksGame
             this.color = color;
         }
 
-        public void draw(PaintEventArgs e)
+        public void Draw(Graphics g)
         {
-            e.Graphics.FillRectangle(new SolidBrush(color), positionX, positionY, size, tankHeight);
-            e.Graphics.DrawLine(new Pen(color), new Point(positionX + size / 2, positionY), GetPosiotionFromAngle(positionX + size / 2, positionY, angle, 30));
+            g.FillRectangle(new SolidBrush(color), positionX, positionY, size, tankHeight);
+            g.DrawLine(new Pen(color), new Point(positionX + size / 2, positionY), GetPosiotionFromAngle(positionX + size / 2, positionY, angle, 30));
             
         }
 
-        public void fire()
+        public void ChangeAngleAndPower(Direction power, Direction angle)
         {
             throw new NotImplementedException();
         }
 
-        public void move(Direction direction)
+        public void Fire()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Move(Direction direction)
         {
             throw new NotImplementedException();
         }
