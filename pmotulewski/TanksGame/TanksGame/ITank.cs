@@ -10,9 +10,9 @@ namespace TanksGame
 {
     interface ITank
     {
+        Position Position { get; }
         void Move(Direction direction);
         void ChangeAngleAndPower(Direction power, Direction angle);
         void Fire();
-        void Draw(Graphics g);
     }
 }

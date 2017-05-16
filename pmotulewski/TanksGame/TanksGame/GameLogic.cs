@@ -10,7 +10,7 @@ namespace TanksGame
 {
     class GameLogic
     {
-        private List<ITank> _tanks;
+        private List<Tank> _tanks;
         private Rocket _rocket;
         private Board _board;
         private StatusPanel _statusPanel;
@@ -20,7 +20,18 @@ namespace TanksGame
 
         public void Initialize()
         {
-            
+            _tanks=new List<Tank>();
+            var tank1 = new Tank(new Position(10,10), new Dimension(40,30));
+
+            tank1.FireEvent += Tank1_FireEvent;
+
+            _tanks.Add(tank1);
+
+        }
+
+        private void Tank1_FireEvent()
+        {
+            _rocket.Launch();
         }
 
         public void Draw(Graphics g)
@@ -46,13 +57,21 @@ namespace TanksGame
         {
             foreach (var tank in _tanks)
             {
-                tank.Draw(g);
+                //tank.Draw(g);
             }
         }
 
         public void Tick()
         {
             
+        }
+
+        public void KeyPress(char c)
+        {
+            if (c == ' ')
+            {
+                _tanks[0].Fire();
+            }
         }
     }
 }

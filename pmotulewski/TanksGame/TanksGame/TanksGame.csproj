@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="Dimension.cs" />
     <Compile Include="GameLogic.cs" />
+    <Compile Include="MoveableGameObject.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Rocket.cs" />
     <Compile Include="SimpleStringPrinter.cs" />
     <Compile Include="Direction.cs" />
@@ -64,6 +67,7 @@
     <Compile Include="StatusPanel.cs" />
     <Compile Include="StringPrinterInterface.cs" />
     <Compile Include="ITank.cs" />
+    <Compile Include="Tank.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
