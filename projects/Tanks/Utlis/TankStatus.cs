@@ -14,7 +14,7 @@ namespace Tanks.Utlis
 
         public TankStatus(double angle, double power, int fuel, double maxPower, int maxFuel)
         {
-            Angle = (angle*180.0/Math.PI).ToString();
+            Angle = Math.Round(angle * 180.0 / Math.PI).ToString();
             Power = MakePercent(power, maxPower);
             Fuel = MakePercent(fuel, maxFuel);
         }

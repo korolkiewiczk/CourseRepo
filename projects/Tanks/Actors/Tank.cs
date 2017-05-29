@@ -8,7 +8,7 @@ namespace Tanks.Actors
         private const double MaxPower = 25;
         private const int MaxFuel = 100;
 
-        private Barrel _barrel;
+        private readonly Barrel _barrel;
         private double _angle;
         private double _power = 10;
         private int _fuel = 100;
@@ -54,7 +54,7 @@ namespace Tanks.Actors
 
         private void SetAngle(double angle)
         {
-            _angle = angle;
+            _angle = Math.Min(Math.PI, Math.Max(0, angle));
             _barrel.SetRotation(-_angle);
         }
 
@@ -95,19 +95,11 @@ namespace Tanks.Actors
 
         public void Fire()
         {
-            Rocket _rocket = new Rocket(this._barrel.Position, new Dimension(0.01, 0.01), this.Texture,
+            Rocket rocket = new Rocket(_barrel.Position, new Dimension(0.01, 0.01), Texture,
                 ((Vector2D)_barrel.Dimension) * _power, new Vector2D(0, 1));
 
 
-            AddChild(_rocket);
-
-
-            //OnFireEvent();
-        }
-
-        protected virtual void OnFireEvent()
-        {
-            FireEvent?.Invoke();
+            AddChild(rocket);
         }
     }
 }
