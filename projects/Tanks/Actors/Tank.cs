@@ -6,14 +6,16 @@ namespace Tanks.Actors
     class Tank : MoveableGameObject
     {
         private const double MaxPower = 25;
+        private const int MaxFuel = 100;
 
         private Barrel _barrel;
         private double _angle;
         private double _power = 10;
+        private int _fuel = 100;
 
         public event Action FireEvent;
 
-        public TankStatus Status => new TankStatus(_angle, _power, MaxPower);
+        public TankStatus Status => new TankStatus(_angle, _power, _fuel, MaxPower, MaxFuel);
 
         public Tank(Vector2D position, Dimension dimension, Texture texture) : base(position, dimension, texture, Shape.FillRect)
         {
@@ -63,16 +65,25 @@ namespace Tanks.Actors
 
         public void Move(Direction direction)
         {
-            if (direction == Direction.Left)
+            if (_fuel > 0)
             {
-                Velocity = new Vector2D(-0.1, 0);
+                if (direction == Direction.Left)
+                {
+                    Velocity = new Vector2D(-0.1, 0);
+                    DecreaseFuelCapacity();
+                }
+                if (direction == Direction.Right)
+                {
+                    Velocity = new Vector2D(0.1, 0);
+                    DecreaseFuelCapacity();
+                }
             }
-            if (direction == Direction.Right)
-            {
-                Velocity = new Vector2D(0.1, 0);
-            }
-
             _barrel.Synchronize(this);
+        }
+
+        private void DecreaseFuelCapacity()
+        {
+            _fuel = Math.Max(0, _fuel - 1);
         }
 
         public override void Update(double tick)

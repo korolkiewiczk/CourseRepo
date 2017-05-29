@@ -10,16 +10,23 @@ namespace Tanks.Utlis
     {
         public string Angle { get; }
         public string Power { get; }
+        public string Fuel { get; }
 
-        public TankStatus(double angle, double power, double maxPower)
+        public TankStatus(double angle, double power, int fuel, double maxPower, int maxFuel)
         {
             Angle = (angle*180.0/Math.PI).ToString();
-            Power = Math.Round(100 * power / maxPower) + "%";
+            Power = MakePercent(power, maxPower);
+            Fuel = MakePercent(fuel, maxFuel);
+        }
+
+        private static string MakePercent(double val, double max)
+        {
+            return Math.Round(100 * val / max) + "%";
         }
 
         public override string ToString()
         {
-            return "Angle: " + Angle + "   Power: " + Power;
+            return "Angle: " + Angle + "   Power: " + Power + "   Fuel: " + Fuel;
         }
     }
 }
