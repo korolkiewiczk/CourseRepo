@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tanks.Drawing;
 using Tanks.Logic;
@@ -26,10 +19,10 @@ namespace Tanks
             ControlStyles.AllPaintingInWmPaint |
             ControlStyles.DoubleBuffer, true);
 
-            Timer GameTimer = new Timer();
-            GameTimer.Interval = 30;
-            GameTimer.Tick += GameTimer_Tick;
-            GameTimer.Start();
+            Timer gameTimer = new Timer();
+            gameTimer.Interval = 30;
+            gameTimer.Tick += GameTimer_Tick;
+            gameTimer.Start();
 
             Paint += Form1_Paint;
 

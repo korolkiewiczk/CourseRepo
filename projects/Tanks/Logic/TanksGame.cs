@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Tanks.Actors;
 using Tanks.Drawing;
 using Tanks.Utlis;
@@ -14,10 +11,9 @@ namespace Tanks.Logic
     class TanksGame
     {
         private List<Tank> _tanks;
-        private Rocket _rocket;
         private Board _board;
 
-        private State _state;
+        private readonly State _state = State.Aim;
         private readonly GameObjectDrawer _gameObjectDrawer;
         private readonly BoardDrawer _boardDrawer;
         private readonly StatusDrawer _statusDrawer;
@@ -37,17 +33,10 @@ namespace Tanks.Logic
             var tank1 = new Tank(new Vector2D(0.1, 0.8), new Dimension(0.15, 0.1), Texture.Green);
             var tank2 = new Tank(new Vector2D(0.8, 0.8), new Dimension(0.15, 0.1), Texture.Red);
 
-            tank1.FireEvent += Tank1_FireEvent;
-
             _tanks.Add(tank1);
             _tanks.Add(tank2);
 
             _board = new Board();
-        }
-
-        private void Tank1_FireEvent()
-        {
-            _rocket.Launch();
         }
 
         public void Draw(Graphics g)
@@ -78,7 +67,6 @@ namespace Tanks.Logic
                 return;
             }
 
-
             var tick = _stopwatch.ElapsedMilliseconds;
 
             foreach (var tank in _tanks)
@@ -91,8 +79,10 @@ namespace Tanks.Logic
 
         public void KeyPress(char c)
         {
-            c = Char.ToLower(c);
+            c = char.ToLower(c);
+
             var tank = _tanks[0];
+
             if (c == 's')
             {
                 tank.Move(Direction.Right);

@@ -13,8 +13,6 @@ namespace Tanks.Actors
         private double _power = 10;
         private int _fuel = 100;
 
-        public event Action FireEvent;
-
         public TankStatus Status => new TankStatus(_angle, _power, _fuel, MaxPower, MaxFuel);
 
         public Tank(Vector2D position, Dimension dimension, Texture texture) : base(position, dimension, texture, Shape.FillRect)
