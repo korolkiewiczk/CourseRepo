@@ -5,11 +5,15 @@ namespace Tanks.Actors
 {
     class Tank : MoveableGameObject
     {
+        private const double MaxPower = 25;
+
         private Barrel _barrel;
         private double _angle;
-        private double _power=10;
+        private double _power = 10;
 
         public event Action FireEvent;
+
+        public TankStatus Status => new TankStatus(_angle, _power, MaxPower);
 
         public Tank(Vector2D position, Dimension dimension, Texture texture) : base(position, dimension, texture, Shape.FillRect)
         {
@@ -20,16 +24,16 @@ namespace Tanks.Actors
             SetAngle(Math.PI / 3);
         }
 
-        public void MoveAngle(Direction direction)
+        public void ChangeAngle(Direction direction)
         {
             if (direction == Direction.Up)
             {
-                SetAngle(_angle + Math.PI / 20);
+                SetAngle(_angle + Math.PI / 60);
             }
 
             if (direction == Direction.Down)
             {
-                SetAngle(_angle - Math.PI / 20);
+                SetAngle(_angle - Math.PI / 60);
             }
         }
 
@@ -37,12 +41,12 @@ namespace Tanks.Actors
         {
             if (direction == Direction.Up)
             {
-                SetPower(Math.Min(50, _power + 0.5));
+                SetPower(Math.Min(MaxPower, _power + MaxPower / 50));
             }
 
             if (direction == Direction.Down)
             {
-                SetPower(Math.Max(1, _power - 0.5));
+                SetPower(Math.Max(1, _power - MaxPower / 50));
             }
         }
 
@@ -56,6 +60,7 @@ namespace Tanks.Actors
         {
             _power = power;
         }
+
         public void Move(Direction direction)
         {
             if (direction == Direction.Left)
@@ -79,10 +84,10 @@ namespace Tanks.Actors
 
         public void Fire()
         {
-            Rocket _rocket = new Rocket(this._barrel.Position, new Dimension(0.01, 0.01), this.Texture, 
-                ((Vector2D)_barrel.Dimension)*_power, new Vector2D(0,1));
+            Rocket _rocket = new Rocket(this._barrel.Position, new Dimension(0.01, 0.01), this.Texture,
+                ((Vector2D)_barrel.Dimension) * _power, new Vector2D(0, 1));
 
-            
+
             AddChild(_rocket);
 
 

@@ -52,7 +52,9 @@
     <Compile Include="Actors\Rocket.cs" />
     <Compile Include="Drawing\BoardDrawer.cs" />
     <Compile Include="Drawing\Drawer.cs" />
+    <Compile Include="Drawing\StatusDrawer.cs" />
     <Compile Include="Utlis\Shape.cs" />
+    <Compile Include="Utlis\TankStatus.cs" />
     <Compile Include="Utlis\Texture.cs" />
     <Compile Include="Drawing\GameObjectDrawer.cs" />
     <Compile Include="Logic\State.cs" />

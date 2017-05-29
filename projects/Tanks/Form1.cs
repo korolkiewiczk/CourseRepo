@@ -35,7 +35,8 @@ namespace Tanks
 
             KeyDown += Form1_KeyDown;
             var scrDimension = new Dimension(ClientSize.Width, ClientSize.Height);
-            _tanksGame = new TanksGame(new GameObjectDrawer(scrDimension), new BoardDrawer(scrDimension));
+            _tanksGame = new TanksGame(new GameObjectDrawer(scrDimension), new BoardDrawer(scrDimension),
+                new StatusDrawer(scrDimension));
             _tanksGame.Initialize();
         }
 

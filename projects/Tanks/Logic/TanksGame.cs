@@ -16,17 +16,19 @@ namespace Tanks.Logic
         private List<Tank> _tanks;
         private Rocket _rocket;
         private Board _board;
-        
+
         private State _state;
-        private GameObjectDrawer _gameObjectDrawer;
+        private readonly GameObjectDrawer _gameObjectDrawer;
         private readonly BoardDrawer _boardDrawer;
+        private readonly StatusDrawer _statusDrawer;
 
-        Stopwatch stopwatch = new Stopwatch();
+        private readonly Stopwatch _stopwatch = new Stopwatch();
 
-        public TanksGame(GameObjectDrawer gameObjectDrawer, BoardDrawer boardDrawer)
+        public TanksGame(GameObjectDrawer gameObjectDrawer, BoardDrawer boardDrawer, StatusDrawer statusDrawer)
         {
             _gameObjectDrawer = gameObjectDrawer;
             _boardDrawer = boardDrawer;
+            _statusDrawer = statusDrawer;
         }
 
         public void Initialize()
@@ -40,7 +42,7 @@ namespace Tanks.Logic
             _tanks.Add(tank1);
             _tanks.Add(tank2);
 
-            _board=new Board();
+            _board = new Board();
         }
 
         private void Tank1_FireEvent()
@@ -50,7 +52,8 @@ namespace Tanks.Logic
 
         public void Draw(Graphics g)
         {
-            DrawTanks(g, _gameObjectDrawer);
+            DrawTanks(g);
+            DrawStatus(g);
 
             _boardDrawer.Draw(g, _board);
 
@@ -67,68 +70,75 @@ namespace Tanks.Logic
             }
         }
 
-        private void DrawTanks(Graphics g, GameObjectDrawer gameObjectDrawer)
-        {
-            foreach (var tank in _tanks)
-            {
-                gameObjectDrawer.Draw(g, tank);
-            }
-        }
-
         public void Tick()
         {
-            if (!stopwatch.IsRunning)
+            if (!_stopwatch.IsRunning)
             {
-                stopwatch.Start();
+                _stopwatch.Start();
                 return;
             }
 
 
-            var tick = stopwatch.ElapsedMilliseconds;
+            var tick = _stopwatch.ElapsedMilliseconds;
 
             foreach (var tank in _tanks)
             {
                 tank.Update((double)tick / 1000);
             }
 
-            stopwatch.Restart();
+            _stopwatch.Restart();
         }
 
         public void KeyPress(char c)
         {
             c = Char.ToLower(c);
+            var tank = _tanks[0];
             if (c == 's')
             {
-                _tanks[0].Move(Direction.Right);
+                tank.Move(Direction.Right);
             }
             if (c == 'a')
             {
-                _tanks[0].Move(Direction.Left);
+                tank.Move(Direction.Left);
             }
 
             if (c == 'e')
             {
-                _tanks[0].MoveAngle(Direction.Up);
+                tank.ChangeAngle(Direction.Up);
             }
 
             if (c == 'd')
             {
-                _tanks[0].MoveAngle(Direction.Down);
+                tank.ChangeAngle(Direction.Down);
             }
 
             if (c == 'x')
             {
-                _tanks[0].ChangePower(Direction.Up);
+                tank.ChangePower(Direction.Up);
             }
 
             if (c == 'z')
             {
-                _tanks[0].ChangePower(Direction.Down);
+                tank.ChangePower(Direction.Down);
             }
 
             if (c == ' ')
             {
-                _tanks[0].Fire();
+                tank.Fire();
+            }
+        }
+
+        private void DrawStatus(Graphics graphics)
+        {
+            var tank = _tanks[0];
+            _statusDrawer.DrawStatus(graphics, tank.Status);
+        }
+
+        private void DrawTanks(Graphics g)
+        {
+            foreach (var tank in _tanks)
+            {
+                _gameObjectDrawer.Draw(g, tank);
             }
         }
     }
