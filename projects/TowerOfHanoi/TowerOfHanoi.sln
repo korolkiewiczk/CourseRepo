@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerOfHanoi.Logic", "TowerOfHanoi.Logic\TowerOfHanoi.Logic.csproj", "{BF6F34BD-0528-4218-B475-3F8CAC68F676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerOfHanoi.Tests", "TowerOfHanoi.Tests\TowerOfHanoi.Tests.csproj", "{39889FF5-DFD6-47E8-9139-DD039DD4C938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerOfHanoi.ConsoleSimulation", "TowerOfHanoi.ConsoleSimulation\TowerOfHanoi.ConsoleSimulation.csproj", "{E8E17DFA-A2E8-401D-A596-FC56C765287E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF6F34BD-0528-4218-B475-3F8CAC68F676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6F34BD-0528-4218-B475-3F8CAC68F676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6F34BD-0528-4218-B475-3F8CAC68F676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6F34BD-0528-4218-B475-3F8CAC68F676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39889FF5-DFD6-47E8-9139-DD039DD4C938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39889FF5-DFD6-47E8-9139-DD039DD4C938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39889FF5-DFD6-47E8-9139-DD039DD4C938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39889FF5-DFD6-47E8-9139-DD039DD4C938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E17DFA-A2E8-401D-A596-FC56C765287E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E17DFA-A2E8-401D-A596-FC56C765287E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E17DFA-A2E8-401D-A596-FC56C765287E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E17DFA-A2E8-401D-A596-FC56C765287E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
