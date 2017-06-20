@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TowerOfHanoi.Tests")]
+[assembly: AssemblyTitle("TowerOfHanoi.WindowSimulation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TowerOfHanoi.Tests")]
+[assembly: AssemblyProduct("TowerOfHanoi.WindowSimulation")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("39889ff5-dfd6-47e8-9139-dd039dd4c938")]
+[assembly: Guid("c316c4fa-4f59-49e6-aafd-7e79ff591a2a")]
 
 // Version information for an assembly consists of the following four values:
 //
