@@ -19,16 +19,15 @@ namespace Lotto
 
             foreach (var item in sprawdzanie.trafione)
             {
-                Console.WriteLine($"Trafiles liczbe = {item.trafione}");
+                Console.WriteLine($"Trafiles liczbe = {sprawdzanie.trafione}");
             }
-            
             Console.ReadKey();
         }
     }
 
     class SprawdzanieCzyTrafione
     {
-        public List<ListaTrafionychLiczb> trafione = new List<ListaTrafionychLiczb>();
+        public List<int> trafione = new List<int>();
 
         public SprawdzanieCzyTrafione(int[] lotto, int[] skreslone)
         {
@@ -38,17 +37,12 @@ namespace Lotto
                 {
                     if (lotto[j] == skreslone[i])
                     {
-                        trafione.Add(new ListaTrafionychLiczb { trafione = skreslone[i] });
+                        trafione.Add(skreslone[i]);
                         break;
                     }
                 }
             }
         }
-    }
-
-    public class ListaTrafionychLiczb
-    {
-        public int trafione;
     }
 
     public class LiczbySkreslone
